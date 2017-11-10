@@ -9,11 +9,19 @@ Useful utility to keep your FS images, documentations and Plugins up to date.
 ```
 #### First time Setup
 
- Inside your cloned directory execute the following:
+ Inside your cloned directory execute the following (Linux / MacOS):
 
 ```
  virtualenv venv --system-site-packages
  source venv/bin/activate
+ pip install -r requirements.txt
+```
+
+For Windows execute the following:
+
+```
+ virtualenv venv --system-site-packages
+ .\venv\Scripts\activate
  pip install -r requirements.txt
 ```
 ## Input:
@@ -24,7 +32,7 @@ description: Please fill user and password fields in the following. You may cust
 user:   <-- Enter the Given User
 password: <-- Enter the Given Password
 sections:
-    - product_download   # you can deselect Category by adding '#' in front of the line 
+    - product_download   # you can deselect Category by adding '#' in front of the line
     - installation_guides
     - user_manuals
     - plugins
@@ -43,9 +51,16 @@ You can select which files extensions to use: begin by downloading the .pdf and 
 
 If environment already setup as per first step, just execute:
 
+Linux / MacOS:
  ```
    source venv/bin/activate
  ```
+ Windows:
+
+ ```
+   .\venv\Scripts\activate
+ ```
+
 ## Download
 ```
  python fsmirror.py download
